@@ -24,6 +24,12 @@ module.exports = function (config) {
     mime: {
       'text/x-typescript': ['ts','tsx']
     },
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     coverageIstanbulReporter: {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true
